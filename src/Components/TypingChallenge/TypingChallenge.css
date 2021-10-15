@@ -1,0 +1,49 @@
+.typing-challenge{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.timer-container{
+    margin:16px;
+}
+.timer{
+    font-size: 38px;
+    font-weight: 500;
+    text-align: center;
+    margin:0;
+}
+.timer-info{
+    color:rgb(228, 92, 92);
+    font-weight:400;
+    font-size: 15px;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.text-area{
+    display: flex;
+    flex-grow: 1;
+    margin:7px;
+    margin-bottom: 8vh;
+    width: 90%;
+    min-height: 400px;
+    flex-wrap:wrap;
+}
+
+.text-area-left,
+.text-area-right{
+    display: flex;
+    width: 50%;
+    flex-grow: 1;
+}
+
+.test-paragraph{
+    font-size: 13px;
+    background-color:rgba(207, 135, 177, 0.801);
+    height: 100%;
+    width: 100%;
+}

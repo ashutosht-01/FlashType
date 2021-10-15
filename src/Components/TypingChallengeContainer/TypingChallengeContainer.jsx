@@ -1,7 +1,8 @@
 import React from "react"
 import './TypingChallengeContainer.css'
 import ChallengeDetailsCard from "../ChallengeDetailsCard/ChallengeDetailsCard"
-function TypingChallengeContainer({ words, charecters, wpm }) {
+import TypingChallenge from "../TypingChallenge/TypingChallenge"
+function TypingChallengeContainer({ selectedParagraph, words, charecters, wpm, timeStarted, timeRemaning }) {
     return (
         <div className="typing-challenge-container">
             {/* details section */}
@@ -20,7 +21,11 @@ function TypingChallengeContainer({ words, charecters, wpm }) {
 
             {/* real challenge section */}
             <div className="type-writter-container">
-                <p>this is real challenge</p>
+                <TypingChallenge
+                    selectedParagraph={selectedParagraph}
+                    timeStarted={timeStarted}
+                    timeRemaning={timeRemaning}
+                />
             </div>
         </div>
 
