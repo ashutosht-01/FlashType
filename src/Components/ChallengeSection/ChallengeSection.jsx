@@ -4,8 +4,8 @@ import './ChallengeSection.css'
 function ChallengeSection() {
     return (
         <div className="challenge-container">
-            <h1 className="challenge-text">Take a Speed Test Now</h1>
-            <div className="testcontainer">
+            <h1 data-aos="fade-down" className="challenge-text">Take a Speed Test Now</h1>
+            <div data-aos="fade-down" className="testcontainer">
                 <TestContainer words={4} charecters={15} wpm={20} />
             </div>
         </div>
