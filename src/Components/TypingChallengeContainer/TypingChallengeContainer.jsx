@@ -1,19 +1,27 @@
 import React from "react"
 import './TypingChallengeContainer.css'
+import ChallengeDetailsCard from "../ChallengeDetailsCard/ChallengeDetailsCard"
 function TypingChallengeContainer({ words, charecters, wpm }) {
     return (
         <div className="typing-challenge-container">
             {/* details section */}
             <div className="details-container">
+
                 {/* words typed */}
-                <p>1</p>
+                <ChallengeDetailsCard cardname="Words" cardvalue={words} />
+
                 {/* charecter typed */}
-                <p>2</p>
+                <ChallengeDetailsCard cardname="Charecters" cardvalue={charecters} />
+
                 {/* speed */}
-                <p>3</p>
+                <ChallengeDetailsCard cardname="Speed" cardvalue={wpm} />
+
             </div>
 
             {/* real challenge section */}
+            <div className="type-writter-container">
+                <p>this is real challenge</p>
+            </div>
         </div>
 
     )
