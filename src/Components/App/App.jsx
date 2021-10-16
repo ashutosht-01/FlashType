@@ -7,6 +7,7 @@ import './App.css'
 
 const totaltime = 60
 
+const ServiceUrl = "http://metaphorpsum.com/paragraphs/1/9"
 
 class App extends React.Component {
     state = {
@@ -15,9 +16,30 @@ class App extends React.Component {
         timeRemaning: totaltime,
         Words: 0,
         Charecters: 0,
-        Wpm: 0
+        Wpm: 0,
+        testInfo: []
+    }
+    componentDidMount() {
+        const selectedParagraphArray = this.state.selectedParagraph.split('')
+        console.log(selectedParagraphArray)
+        const testinfo = selectedParagraphArray.map(function (letter) {
+            return {
+                testletter: letter,
+                status: 'notattempted'
+            };
+        })
+        console.log('test ___ info ', testinfo)
+        this.setState({ testInfo: testinfo })
+    }
+
+    handeluserInput = function (value) {
+        console.log(value)
     }
     render() {
+
+        console.log('test info ', this.state.testInfo)
+
+
         return (
             <div className="app">
                 {/*Nav Section*/}
@@ -32,6 +54,8 @@ class App extends React.Component {
                     speed={this.state.Wpm}
                     timeStarted={this.state.timeStarted}
                     timeRemaning={this.state.timeRemaning}
+                    testInfo={this.state.testInfo}
+                    onInputChange={this.handeluserInput}
                 />
                 {/*footer Section */}
                 <Footer />

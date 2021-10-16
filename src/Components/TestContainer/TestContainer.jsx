@@ -2,7 +2,7 @@ import React from 'react'
 import TryAgain from '../TryAgain/TryAgain'
 import TypingChallengeContainer from '../TypingChallengeContainer/TypingChallengeContainer'
 import './TestContainer.css'
-function TestContainer({ selectedParagraph, words, charecters, speed, timeStarted, timeRemaning }) {
+function TestContainer({ selectedParagraph, words, charecters, speed, timeStarted, timeRemaning, testInfo }) {
     return (
         <div className="test-container">
             <div data-aos="fade-up" className="typing-challenge-container">
@@ -13,6 +13,7 @@ function TestContainer({ selectedParagraph, words, charecters, speed, timeStarte
                     wpm={speed}
                     timeStarted={timeStarted}
                     timeRemaning={timeRemaning}
+                    testInfo={testInfo}
                 />
             </div>
             {/* <div className="tryagain-container">

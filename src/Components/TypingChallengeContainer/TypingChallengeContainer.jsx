@@ -2,7 +2,9 @@ import React from "react"
 import './TypingChallengeContainer.css'
 import ChallengeDetailsCard from "../ChallengeDetailsCard/ChallengeDetailsCard"
 import TypingChallenge from "../TypingChallenge/TypingChallenge"
-function TypingChallengeContainer({ selectedParagraph, words, charecters, wpm, timeStarted, timeRemaning }) {
+function TypingChallengeContainer({ selectedParagraph, words, charecters, wpm, timeStarted, timeRemaning, testInfo }) {
+
+
     return (
         <div className="typing-challenge-container">
             {/* details section */}
@@ -25,6 +27,7 @@ function TypingChallengeContainer({ selectedParagraph, words, charecters, wpm, t
                     selectedParagraph={selectedParagraph}
                     timeStarted={timeStarted}
                     timeRemaning={timeRemaning}
+                    testInfo={testInfo}
                 />
             </div>
         </div>
