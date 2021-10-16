@@ -9,7 +9,7 @@ function Nav() {
                 <p className="flash-logo-text">FlashType</p>
             </div>
             <div className="nav-right">
-                <a target="_blank" className="code-link" href="">Code</a>
+                <a target="_blank" className="code-link" href="https://github.com/ashutosht-01/FlashType">Code</a>
             </div>
         </div>
     )

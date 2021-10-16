@@ -20,14 +20,14 @@ function TryAgain({ charecters, words, wpm, startAgain }) {
                     startAgain()
                 }} className="end-buttons start-again-btn">Re-try</button>
                 <button onClick={function () {
-                    window.open("https://www.facebook.com/sharer.php?u=https://ashutosht-01.github.io/Sorting-Visualizer/",
+                    window.open("https://www.facebook.com/sharer.php?u=https://ashutosht-01.github.io/FlashType/",
                         "facebook-share-dialog",
                         "width=800 , height=600"
                     )
                 }} className="end-buttons share-btn">Share</button>
                 <button onClick={function () {
                     window.open(
-                        "https://twitter.com/intent/tweet?text=https://ashutosht-01.github.io/Sorting-Visualizer/",
+                        "https://twitter.com/intent/tweet?text=https://ashutosht-01.github.io/FlashType/",
                         "Twitter",
                         "width:800, height:600"
                     );

@@ -26,7 +26,7 @@ function footer() {
                 <a href="">
                     <FontAwesomeIcon icon={faTwitter} size="2x" color="wheat" />
                 </a>
-                <a href="">
+                <a href="https://github.com/ashutosht-01">
                     <FontAwesomeIcon icon={faGithub} size="2x" color="wheat" />
                 </a>
                 <a href="">
