@@ -30,20 +30,14 @@ class App extends React.Component {
             Math.floor(Math.random() * SAMPLE_PARAGRAPHS.length)
             ];
 
-        const selectedParagraphArray = data.split("");
-        const testInfo = selectedParagraphArray.map((selectedLetter) => {
+        const selectedParagraphArray = data.split('')
+        const testinfo = selectedParagraphArray.map(function (letter) {
             return {
-                testLetter: selectedLetter,
-                status: "notAttempted",
+                testletter: letter,
+                status: 'notattempted'
             };
-        });
-
-        // Update the testInfo in state
-        this.setState({
-            ...DefaultStates,
-            selectedParagraph: data,
-            testInfo,
-        });
+        })
+        this.setState({ ...DefaultStates, selectedParagraph: data, testInfo: testinfo })
     };
 
     fetchNewParagraph = () => {
