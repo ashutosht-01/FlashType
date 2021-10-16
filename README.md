@@ -1,2 +1,3 @@
-#flashtype
-A simple typing speed test application using React.js
+# flashtype
+Deployment :- [URL](FlashType) <br /> 
+A  typing speed test application 
