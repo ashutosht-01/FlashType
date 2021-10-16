@@ -31,9 +31,27 @@ class App extends React.Component {
         console.log('test ___ info ', testinfo)
         this.setState({ testInfo: testinfo })
     }
+    //timer function
 
-    handeluserInput = function (value) {
-        console.log(value)
+    startTimer = () => {
+        this.setState({ timeStarted: true })
+        const Timer = setInterval(() => {
+            if (this.state.timeRemaning > 0) {
+                //change the speed
+                const timeSpent = totaltime - this.state.timeRemaning;
+                const wpm = (timeSpent > 0) ? ((this.state.Words / timeSpent) * totaltime) : 0;
+                this.setState({
+                    timeRemaning: this.state.timeRemaning - 1,
+                    Wpm: parseInt(wpm)
+                })
+            } else {
+                // after executing clear interval it stops calling callback function
+                clearInterval(Timer)
+            }
+        }, 1000)
+    }
+    handeluserInput = (value) => {
+        if (!this.state.timeStarted) this.startTimer()
     }
     render() {
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import TestLetter from '../TestLetter/TestLetter'
 import './TypingChallenge.css'
-function TypingChallenge({ selectedParagraph, timeStarted, timeRemaning, testInfo }) {
+function TypingChallenge({ selectedParagraph, timeStarted, timeRemaning, testInfo, onInputChange }) {
     return (
         <div className="typing-challenge">
             <div className="timer-container">
@@ -15,16 +15,23 @@ function TypingChallenge({ selectedParagraph, timeStarted, timeRemaning, testInf
             <div className="text-area">
                 <div className="text-area-left">
                     <div className="test-paragraph">
-                        {/* selectedParagraph */}
-                        {testInfo.map(function (testobj) {
-                            return <TestLetter letterInfo={testobj} />
-
+                        {/* selectedParagraph  n testletter*/}
+                        {testInfo.map(function (testobj, index) {
+                            return <TestLetter
+                                // test letter is NOT unique  but index is unique N child components put through array requires key prop 
+                                key={index}
+                                letterInfo={testobj} />
                         })}
 
                     </div>
                 </div>
                 <div className="text-area-right">
-                    <textarea name="" placeholder="start typing " rows="10"></textarea>
+                    <textarea onChange={(event) => {
+                        onInputChange(event.target.value)
+                    }}
+                        className="right-text-area" name="" placeholder="start typing "  >
+
+                    </textarea>
                 </div>
             </div>
         </div>

@@ -43,7 +43,11 @@
 
 .test-paragraph{
     font-size: 13px;
-    background-color:rgba(207, 135, 177, 0.801);
+    background-color:rgba(215, 214, 230, 0.801);
     height: 100%;
+    width: 100%;
+}
+
+.right-text-area{
     width: 100%;
 }
