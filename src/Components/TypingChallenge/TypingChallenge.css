@@ -40,12 +40,17 @@
     width: 50%;
     flex-grow: 1;
 }
+.text-area-right{
+    font-size: 19px;
+    line-height: 19px;
+}
 
 .test-paragraph{
     font-size: 13px;
-    background-color:rgba(215, 214, 230, 0.801);
+    background-color:rgba(32, 3, 70, 0.801);
     height: 100%;
     width: 100%;
+    letter-spacing: 2px;
 }
 
 .right-text-area{

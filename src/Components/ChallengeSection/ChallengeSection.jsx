@@ -1,7 +1,7 @@
 import React from 'react'
 import TestContainer from '../TestContainer/TestContainer'
 import './ChallengeSection.css'
-function ChallengeSection({ selectedParagraph, words, charecters, speed, timeStarted, timeRemaning, testInfo, onInputChange }) {
+function ChallengeSection({ selectedParagraph, words, charecters, wpm, timeStarted, timeRemaning, testInfo, onInputChange, startAgain }) {
 
     return (
         <div className="challenge-container">
@@ -11,11 +11,12 @@ function ChallengeSection({ selectedParagraph, words, charecters, speed, timeSta
                     selectedParagraph={selectedParagraph}
                     words={words}
                     charecters={charecters}
-                    speed={speed}
+                    wpm={wpm}
                     timeStarted={timeStarted}
                     timeRemaning={timeRemaning}
                     testInfo={testInfo}
                     onInputChange={onInputChange}
+                    startAgain={startAgain}
                 />
             </div>
         </div>

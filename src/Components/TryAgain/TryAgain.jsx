@@ -1,6 +1,6 @@
 import React from 'react'
 import './TryAgain.css'
-function TryAgain({ charecters, words, wpm }) {
+function TryAgain({ charecters, words, wpm, startAgain }) {
     return (
         <div className="try-again-container">
             <h1 data-aos="fade-up">Test Results</h1>
@@ -16,7 +16,9 @@ function TryAgain({ charecters, words, wpm }) {
                 </p>
             </div>
             <div data-aos="fade-up">
-                <button className="end-buttons start-again-btn">Re-try</button>
+                <button onClick={function () {
+                    startAgain()
+                }} className="end-buttons start-again-btn">Re-try</button>
                 <button onClick={function () {
                     window.open("https://www.facebook.com/sharer.php?u=https://ashutosht-01.github.io/Sorting-Visualizer/",
                         "facebook-share-dialog",
